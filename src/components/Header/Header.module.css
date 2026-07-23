@@ -1,0 +1,82 @@
+.header {
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inner {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #121417;
+}
+
+.logo span {
+  color: #8a2be2;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  text-decoration: none;
+  color: #121417;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.active {
+  border-bottom-color: #8a2be2;
+  color: #8a2be2;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userName {
+  font-weight: 600;
+  color: #121417;
+}
+
+.textButton {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #121417;
+  cursor: pointer;
+}
+
+.registerButton {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #8a2be2;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
