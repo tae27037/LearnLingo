@@ -1,6 +1,6 @@
 # LearnLingo
 
-###LearnLingo is a web application for finding online language tutors and booking trial lessons.
+### LearnLingo is a web application for finding online language tutors and booking trial lessons.
 
 Users can browse available teachers, filter them by teaching language, student level and lesson price, view detailed teacher information and reviews, add teachers to favorites, and book a trial lesson.
 
