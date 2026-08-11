@@ -94,9 +94,9 @@ The application validates:
 - Logout functionality
 - Teachers catalog
 - Filtering teachers by:
-  - teaching language
-  - student level
-  - lesson price
+  * teaching language
+  * student level
+  * lesson price
 - Pagination with "Load more"
 - Add and remove teachers from favorites
 - Persistent favorites after page reload
@@ -107,9 +107,9 @@ The application validates:
 - Form validation
 - Responsive modal windows
 - Modal closing by:
-  - close button
-  - backdrop click
-  - `Esc` key
+  * close button
+  * backdrop click
+  * `Esc` key
 - Protected routes for authenticated users
 
 ## Technologies
@@ -134,35 +134,5 @@ Firebase is used for:
 
 The application works with Firebase Authentication and Realtime Database.
 
-## Project Structure
-
-```text
-src/
-├── components/
-│   ├── Header/
-│   ├── Modal/
-│   ├── PrivateRoute/
-│   ├── TeacherCard/
-│   └── ...
-│
-├── context/
-│   └── AuthContext.jsx
-│
-├── firebase/
-│   ├── config.js
-│   └── db.js
-│
-├── pages/
-│   ├── Home/
-│   ├── Teachers/
-│   └── Favorites/
-│
-├── utils/
-│   └── validationSchemas.js
-│
-├── App.jsx
-├── main.jsx
-└── index.css
-```
 
 ## Getting Started
