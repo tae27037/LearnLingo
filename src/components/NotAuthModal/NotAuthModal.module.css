@@ -1,0 +1,26 @@
+.content {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.title {
+  font-size: 28px;
+  margin: 0 0 14px;
+}
+
+.subtitle {
+  color: var(--text);
+  line-height: 1.4;
+  margin: 0 0 24px;
+}
+
+.loginButton {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,20 +1,24 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
-import AuthModal from '../AuthModal/AuthModal';
-import styles from './Header.module.css';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import AuthModal from "../AuthModal/AuthModal";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const { isAuthenticated, user, logout } = useAuth();
   const [authModalMode, setAuthModalMode] = useState(null);
 
-  const navLinkClass = ({ isActive }) => (isActive ? `${styles.link} ${styles.active}` : styles.link);
+  const navLinkClass = ({ isActive }) =>
+    isActive ? `${styles.link} ${styles.active}` : styles.link;
 
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.logo}>
-          Lingua<span>Learn</span>
+          <svg width="20" height="20">
+            <use href="/sprite.svg#icon-ukraine"></use>
+          </svg>
+          LearnLingo
         </NavLink>
 
         <nav className={styles.nav}>
@@ -34,8 +38,14 @@ const Header = () => {
         <div className={styles.actions}>
           {isAuthenticated ? (
             <>
-              <span className={styles.userName}>{user.displayName || user.email}</span>
-              <button type="button" className={styles.textButton} onClick={logout}>
+              <span className={styles.userName}>
+                {user.displayName || user.email}
+              </span>
+              <button
+                type="button"
+                className={styles.textButton}
+                onClick={logout}
+              >
                 Log Out
               </button>
             </>
@@ -44,14 +54,17 @@ const Header = () => {
               <button
                 type="button"
                 className={styles.textButton}
-                onClick={() => setAuthModalMode('login')}
+                onClick={() => setAuthModalMode("login")}
               >
+                <svg width="20" height="20" stroke="currentColor" fill="none">
+                  <use href="/sprite.svg#icon-log-in-01"></use>
+                </svg>
                 Log In
               </button>
               <button
                 type="button"
                 className={styles.registerButton}
-                onClick={() => setAuthModalMode('register')}
+                onClick={() => setAuthModalMode("register")}
               >
                 Registration
               </button>
@@ -63,7 +76,7 @@ const Header = () => {
       <AuthModal
         isOpen={Boolean(authModalMode)}
         onClose={() => setAuthModalMode(null)}
-        initialMode={authModalMode || 'login'}
+        initialMode={authModalMode || "login"}
       />
     </header>
   );

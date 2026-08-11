@@ -1,0 +1,151 @@
+.hero {
+  margin: 0;
+  padding: 20px 64px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 720px 568px;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.textBlock {
+  width: 720px;
+  height: 530px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background);
+  border-radius: 30px;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+.title {
+  max-width: 548px;
+  margin: 0 0 32px 0;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.16667;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: 400;
+  background: var(--light-yellow);
+  border-radius: 10px;
+  padding: 0 4px;
+}
+
+.subtitle {
+  height: auto;
+  max-width: 471px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: -0.02em;
+  margin: 0 0 64px 0;
+  color: var(--text);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 12px;
+  width: 267px;
+  height: 60px;
+  color: var(--text);
+  background-color: var(--yellow);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  text-decoration: none;
+}
+
+.cta:hover,
+.cta:active {
+  background: var(--light-yellow);
+}
+
+.imageBlock {
+  width: 568px;
+  height: 530px;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  border: none;
+}
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1312px;
+  height: 116px;
+  gap: 100px;
+  padding: 40px 122px 40px 123px;
+  margin: 0;
+  border: none;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background-image: url("/public/img/rectangle.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.advantageItem {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.advantageNumber {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.14286;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.advantageLabel {
+  color: var(--text-grey);
+  font-size: 14px;
+  font-weight: 400;
+  white-space: normal;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  width: 96px;
+  height: 36px;
+}
+
+.plus {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  transform: translateY(-1px);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.14286;
+  letter-spacing: -0.02em;
+}

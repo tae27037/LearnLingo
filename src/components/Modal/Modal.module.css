@@ -1,0 +1,57 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--text-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.modal {
+  position: relative;
+  background: var(--white);
+  border-radius: 30px;
+  padding: 64px;
+  max-width: 599px;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); */
+
+  scrollbar-width: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: none;
+  color: var(--text-transparent);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 32px 20px;
+  }
+}

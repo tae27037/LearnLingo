@@ -1,0 +1,275 @@
+.card {
+  display: flex;
+  gap: 48px;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 24px;
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 32px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--light-yellow);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.onlineIcon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 12px;
+  height: 12px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.statsList {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.statsList > li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.lessonsOnline,
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.price {
+  color: var(--green);
+  margin-left: 4px;
+}
+
+.bookIcon {
+  flex-shrink: 0;
+}
+
+.kicker {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-transparent);
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+}
+
+.heartButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.line {
+  margin: 0;
+  font-weight: 500;
+  padding-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.label {
+  color: var(--text-transparent);
+}
+
+.value {
+  color: var(--text);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.readMore {
+  font: inherit;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  background: none;
+  align-self: self-start;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--text);
+  padding-bottom: 32px;
+  padding-top: 8px;
+}
+
+.levelsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.levelBadge {
+  padding: 8px 12px;
+  border-radius: 35px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14286;
+  color: var(--text);
+  border: 1px solid rgba(18, 20, 23, 0.2);
+}
+
+.levelBadgeActive {
+  background: var(--yellow);
+  border: none;
+}
+
+.experience {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  padding: 8px 0 32px 0;
+}
+
+.reviewerAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-transparent);
+}
+
+.reviewerMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: var(--text);
+}
+
+.starIcon {
+  flex-shrink: 0;
+}
+
+.reviewText {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  padding-top: 16px;
+}
+
+.bookButton {
+  margin-top: 32px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 12px;
+  background: var(--yellow);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: var(--text);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bookButton:hover,
+.avatarWrapper:active {
+  background: var(--button-hover);
+}
+
+.leftHeader {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin: 0;
+}

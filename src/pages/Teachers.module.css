@@ -1,0 +1,41 @@
+.page {
+  max-width: 1440px;
+  margin: 0;
+  padding: 96px 128px;
+  background: var(--background);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.loadMore {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 12px;
+  background: var(--yellow);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: var(--text);
+  cursor: pointer;
+  margin-top: 64px;
+}
+
+.loadMore:hover {
+  background: var(--light-yellow);
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-transparent);
+  margin: 0;
+  padding: 48px 0;
+}

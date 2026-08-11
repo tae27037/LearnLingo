@@ -1,0 +1,133 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  color: var(--text-grey);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 438px;
+  gap: 18px;
+  margin: 0;
+}
+
+.input {
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin: 0;
+}
+
+.input:focus {
+  border-color: var(--light-yellow);
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--background-input) inset;
+  box-shadow: 0 0 0 1000px var(--background-input) inset;
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.submitButton {
+  padding: 16px;
+  width: 438px;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  background: var(--yellow);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-top: 22px;
+}
+
+.submitButton:hover,
+.submitButton:active {
+  background-color: var(--button-hover);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.error {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--red);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.error:not(:empty) {
+  height: 16px;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.passwordWrapper .input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 48px;
+  margin-bottom: 0;
+}
+
+.eyeButton {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eyeButtonActive {
+  color: var(--text-transparent);
+}

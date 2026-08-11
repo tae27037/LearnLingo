@@ -1,0 +1,182 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  width: 472px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--text-grey);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.teacherInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.teacherLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33333;
+  color: var(--text-transparent);
+}
+
+.teacherName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  padding-top: 4px;
+  margin: 0;
+}
+
+.groupTitle {
+  width: 472px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: var(--text);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.reasonList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.reasonOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  text-align: center;
+  color: var(--text);
+}
+
+.reasonOption input {
+  display: none;
+}
+
+.radio {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  position: relative;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.radio::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--yellow);
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.reasonOption input:checked + .radio {
+  border-color: var(--yellow);
+}
+
+.reasonOption input:checked + .radio::after {
+  transform: scale(1);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 472px;
+}
+
+.input {
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--text);
+  outline: none;
+  border: 1px solid var(--border);
+}
+
+.input:focus {
+  border-color: var(--yellow);
+}
+
+.submitButton {
+  width: 472px;
+  height: 60px;
+  margin-top: 22px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--yellow);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.error {
+  height: 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--red);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.error:not(:empty) {
+  height: 16px;
+  margin-bottom: 18px;
+  opacity: 1;
+}

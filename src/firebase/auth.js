@@ -2,22 +2,22 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
   onAuthStateChanged,
-} from "firebase/auth";
-import { auth } from "./config";
+} from 'firebase/auth';
+import { auth } from './config';
 
-export const registerUser = async (email, password) => {
-  return await createUserWithEmailAndPassword(auth, email, password);
+export const registerUser = async ({ name, email, password }) => {
+  const credentials = await createUserWithEmailAndPassword(auth, email, password);
+  await updateProfile(credentials.user, { displayName: name });
+  return credentials.user;
 };
 
-export const loginUser = async (email, password) => {
-  return await signInWithEmailAndPassword(auth, email, password);
+export const loginUser = async ({ email, password }) => {
+  const credentials = await signInWithEmailAndPassword(auth, email, password);
+  return credentials.user;
 };
 
-export const logoutUser = async () => {
-  return await signOut(auth);
-};
+export const logoutUser = () => signOut(auth);
 
-export const subscribeAuth = (callback) => {
-  return onAuthStateChanged(auth, callback);
-};
+export const subscribeToAuthChanges = (callback) => onAuthStateChanged(auth, callback);

@@ -1,82 +1,107 @@
 .header {
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  background: var(--white);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .inner {
-  max-width: 1184px;
-  margin: 0 auto;
-  padding: 20px 32px;
+  max-width: 100%;
+  margin: 0 128px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
   text-decoration: none;
-  color: #121417;
-}
-
-.logo span {
-  color: #8a2be2;
+  color: var(--text);
 }
 
 .nav {
   display: flex;
-  gap: 32px;
+  gap: 28px;
 }
 
 .link {
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   text-decoration: none;
-  color: #121417;
-  font-weight: 500;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
 }
 
-.active {
-  border-bottom-color: #8a2be2;
-  color: #8a2be2;
+.link:hover,
+.link:active {
+  color: var(--text-transparent);
 }
 
+.textButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.textButton svg {
+  stroke: var(--yellow);
+  fill: none;
+}
 .actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-.userName {
-  font-weight: 600;
-  color: #121417;
+.link {
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 700;
+  color: var(--yellow);
 }
 
 .textButton {
   background: none;
   border: none;
-  font-size: 15px;
-  font-weight: 600;
-  color: #121417;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
   cursor: pointer;
+  padding: 0;
+}
+
+.textButton:hover,
+.textButton:active {
+  color: var(--text-transparent);
 }
 
 .registerButton {
-  padding: 10px 24px;
+  width: 166px;
+  height: 48px;
+  padding: 14px 39px;
   border: none;
   border-radius: 12px;
-  background: #8a2be2;
-  color: #fff;
-  font-weight: 600;
+  background-color: var(--text);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-  }
+.registerButton:hover,
+.registerButton:active {
+  background-color: var(--text-transparent);
 }
