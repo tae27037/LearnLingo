@@ -1,8 +1,9 @@
 .page {
-  max-width: 1440px;
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
   padding: 96px 128px;
   background: var(--background);
+  box-sizing: border-box;
 }
 
 .list {

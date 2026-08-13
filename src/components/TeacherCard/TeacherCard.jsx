@@ -119,11 +119,11 @@ const TeacherCard = ({ teacher, onBookTrial, onRequireAuth }) => {
             >
               {favorite ? (
                 <svg className={styles.heartFilled} width="26" height="26">
-                  <use href="/public/sprite.svg#icon-heart-filled"></use>
+                  <use href="/sprite.svg#icon-heart-filled"></use>
                 </svg>
               ) : (
                 <svg className={styles.heartIcon} width="26" height="26">
-                  <use href="/public/sprite.svg#icon-heart"></use>
+                  <use href="/sprite.svg#icon-heart"></use>
                 </svg>
               )}
             </button>
